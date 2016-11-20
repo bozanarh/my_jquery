@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- or http://code.jquery.com/jquery-latest.min.js" -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js" ></script>
+    <!--script type="text/javascript" src= "jquery-3.1.1.js"></script-->
+    <style>
+        #circle {
+            width: 200px;
+            height: 200px;
+            background-color:green;
+            border-radius:100px
+        }
+        .square{
+            width:300px;
+            height:300px;
+            background-color:red;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <script>
+        /*
+        $("div").click(function(){
+            //Show me the value of width element:
+            //alert($(this).css("width"))
+
+            //change the width of the element:
+            //$(this).css("width", "500px");
+
+            //hide the element
+            //$(this).css("display", "none");
+            //or you can hide it this way too:
+            //$(this).hide();
+
+            //to fade it out:
+            $(this).fadeOut();
+        });
+        */
+        $("#circle").click(function(){
+            $(".square").fadeOut()
+        });
+        $(".square").click(function(){
+            $("#circle").fadeOut()
+        });
+    </script>
+</body>
+</html>
+
